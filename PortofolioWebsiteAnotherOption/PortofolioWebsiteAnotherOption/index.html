@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ari Okta Pratama — Portfolio</title>
+    
+    <!-- Google Fonts: Instrument Serif, Plus Jakarta Sans, Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- External Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 font-sans-editorial antialiased selection:bg-stone-800 selection:text-stone-50 overflow-x-hidden relative">
+
+    <!-- Subtle Warm Ambient Lights (Elegan, Lembut & Tidak Mencolok) -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+        <!-- Subtle Paper Grid Texture -->
+        <div class="absolute inset-0 bg-[radial-gradient(#d6d3d1_1px,transparent_1px)] [background-size:24px_24px] opacity-40"></div>
+        <!-- Soft Warm Ambient Glow Orbs -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-amber-200/25 blur-3xl"></div>
+        <div class="absolute top-1/3 -right-24 w-96 h-96 rounded-full bg-indigo-200/20 blur-3xl"></div>
+        <div class="absolute bottom-1/4 -left-20 w-80 h-80 rounded-full bg-emerald-200/20 blur-3xl"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 transition-all duration-300">
+        <nav class="bg-white/85 backdrop-blur-md px-6 py-3.5 rounded-full border border-stone-200/80 shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex items-center justify-between">
+            <a href="#" class="text-base font-bold tracking-tight text-stone-900 flex items-center gap-2 group">
+                <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-amber-600 to-indigo-600 group-hover:scale-125 transition-transform"></span>
+                <span class="tracking-tight">Ari Okta Pratama</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-7 text-xs font-semibold text-stone-600 tracking-wide uppercase font-mono-editorial">
+                <a href="#about" class="hover:text-indigo-600 transition-colors">About</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-colors">Toolbelt</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-colors">Works</a>
+                <a href="#experience" class="hover:text-indigo-600 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-indigo-600 transition-colors">Contact</a>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <a href="https://wa.me/6281995223741" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 bg-stone-900 hover:bg-stone-800 text-stone-50 px-4 py-2 rounded-full text-xs font-medium transition-all shadow-sm">
+                    <span>Let's Talk</span>
+                    <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-emerald-400"></i>
+                </a>
+                <button id="menu-btn" class="p-2 md:hidden hover:bg-stone-100 rounded-full transition-colors text-stone-800 cursor-pointer" aria-label="Open Menu">
+                    <i data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Drawer / Card Modal (Editorial Warm) -->
+    <div id="mobile-menu-overlay" style="display: none;" class="fixed inset-0 z-[100] bg-stone-900/40 backdrop-blur-sm items-center justify-center p-4 opacity-0 transition-opacity duration-300">
+        <div id="mobile-menu-card" class="w-full max-w-sm bg-[#FAF9F5] border border-stone-200 rounded-3xl shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300">
+            
+            <!-- Top Bar with Close Button -->
+            <div class="px-5 py-3.5 border-b border-stone-200/80 flex items-center justify-between bg-white/70">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-indigo-500"></span>
+                    <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-stone-700">Navigation</span>
+                </div>
+                <button id="close-menu-btn" type="button" class="p-1.5 rounded-full text-stone-500 hover:text-stone-950 hover:bg-stone-200/60 transition-colors cursor-pointer" aria-label="Close Menu">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="p-5 space-y-5 max-h-[82vh] overflow-y-auto">
+                <!-- User Profile Header -->
+                <div class="flex items-center gap-3.5 pb-4 border-b border-stone-200/80">
+                    <div class="relative w-11 h-11 rounded-full bg-gradient-to-tr from-stone-900 to-indigo-950 text-stone-50 flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
+                        AO
+                        <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-[#FAF9F5]"></span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-sm font-bold text-stone-900 truncate">Ari Okta Pratama</h3>
+                        <p class="text-[11px] text-stone-500 truncate">aripratamaokta@gmail.com</p>
+                    </div>
+                    <span class="text-[10px] font-mono-editorial px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0 font-semibold">
+                        Available
+                    </span>
+                </div>
+
+                <!-- Section: MENU -->
+                <div class="space-y-1">
+                    <p class="text-[10px] font-bold text-stone-400 tracking-wider uppercase px-2 mb-2 font-mono-editorial">Menu</p>
+                    
+                    <a href="#about" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-xl text-stone-700 hover:text-indigo-900 hover:bg-indigo-50/60 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-indigo-50 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                                <i data-lucide="user" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium">About Me</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400 group-hover:text-indigo-600 group-hover:translate-x-0.5 transition-all"></i>
+                    </a>
+
+                    <a href="#skills" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-xl text-stone-700 hover:text-sky-900 hover:bg-sky-50/60 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-sky-50 text-sky-700 group-hover:bg-sky-600 group-hover:text-white transition-colors">
+                                <i data-lucide="wrench" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium">Technical Toolbelt</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400 group-hover:text-sky-600 group-hover:translate-x-0.5 transition-all"></i>
+                    </a>
+
+                    <a href="#projects" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-xl text-stone-700 hover:text-amber-900 hover:bg-amber-50/60 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-amber-50 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+                                <i data-lucide="layers" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium">Selected Works</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400 group-hover:text-amber-600 group-hover:translate-x-0.5 transition-all"></i>
+                    </a>
+
+                    <a href="#experience" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-xl text-stone-700 hover:text-emerald-900 hover:bg-emerald-50/60 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-emerald-50 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                                <i data-lucide="trophy" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium">Experience & Awards</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400 group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all"></i>
+                    </a>
+
+                    <a href="#contact" class="mobile-nav-link flex items-center justify-between px-3 py-2.5 rounded-xl text-stone-700 hover:text-stone-950 hover:bg-stone-200/50 transition-all group">
+                        <div class="flex items-center gap-3">
+                            <div class="p-2 rounded-lg bg-stone-100 text-stone-700 group-hover:bg-stone-900 group-hover:text-stone-50 transition-colors">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                            </div>
+                            <span class="text-xs sm:text-sm font-medium">Get in Touch</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-4 h-4 text-stone-400 group-hover:text-stone-700 group-hover:translate-x-0.5 transition-all"></i>
+                    </a>
+                </div>
+
+                <!-- Section: MORE & CONNECT -->
+                <div class="space-y-3 pt-3.5 border-t border-stone-200/80">
+                    <p class="text-[10px] font-bold text-stone-400 tracking-wider uppercase px-2 font-mono-editorial">Connect</p>
+                    
+                    <div class="grid grid-cols-3 gap-2">
+                        <a href="https://www.linkedin.com/in/Arioktpratama" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-2 rounded-xl bg-white hover:bg-blue-50 hover:border-blue-200 border border-stone-200 transition-all text-stone-700 hover:text-blue-700">
+                            <i data-lucide="linkedin" class="w-4 h-4 mb-1 text-blue-600"></i>
+                            <span class="text-[10px] font-medium">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/AOP1" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 transition-all text-stone-700 hover:text-stone-950">
+                            <i data-lucide="github" class="w-4 h-4 mb-1 text-stone-800"></i>
+                            <span class="text-[10px] font-medium">GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/arioktapratama21" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center p-2 rounded-xl bg-white hover:bg-rose-50 hover:border-rose-200 border border-stone-200 transition-all text-stone-700 hover:text-rose-600">
+                            <i data-lucide="instagram" class="w-4 h-4 mb-1 text-rose-500"></i>
+                            <span class="text-[10px] font-medium">Instagram</span>
+                        </a>
+                    </div>
+
+                    <!-- WhatsApp CTA -->
+                    <a href="https://wa.me/6281995223741" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-stone-900 text-stone-50 hover:bg-stone-800 transition-colors shadow-sm">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                        <span>Chat on WhatsApp</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-stone-400"></i>
+                    </a>
+                </div>
+
+                <!-- Footer -->
+                <div class="pt-1 text-center border-t border-stone-200/80">
+                    <p class="text-[10px] font-mono-editorial text-stone-400">Ari Okta Pratama Portfolio</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="pt-36 pb-24 px-6 max-w-5xl mx-auto relative">
+        <div class="space-y-8">
+            <!-- Available Badge with soft emerald touch -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-emerald-200/70 text-xs font-mono-editorial text-emerald-900 shadow-sm">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                <span>Available for Internship & Creative Collaborations</span>
+            </div>
+
+            <div class="space-y-4">
+                <h1 class="text-4xl sm:text-6xl md:text-7xl font-normal tracking-tight text-stone-950 font-serif-editorial leading-[1.08]">
+                    Designing thoughtful interfaces, <br>
+                    <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-indigo-700 via-stone-800 to-amber-700">
+                        building intuitive digital products.
+                    </span>
+                </h1>
+                
+                <p class="text-stone-600 text-base sm:text-lg max-w-2xl leading-relaxed">
+                    Hello, I'm <strong class="text-stone-900 font-semibold underline decoration-amber-400/60 decoration-2 underline-offset-4">Ari Okta Pratama</strong>. An Information Systems student based in Indonesia, bridging user-centric UI/UX research with clean, responsive frontend engineering.
+                </p>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold">
+                <a href="#projects" class="px-6 py-3.5 rounded-full bg-stone-900 text-stone-50 hover:bg-stone-800 hover:shadow-md transition-all flex items-center gap-2 group">
+                    <span>Explore Selected Works</span>
+                    <i data-lucide="arrow-down-right" class="w-4 h-4 text-amber-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5 transition-transform"></i>
+                </a>
+                <a href="#about" class="px-6 py-3.5 rounded-full bg-white border border-stone-200 text-stone-800 hover:bg-stone-50 hover:border-stone-300 transition-all">
+                    <span>Biography & Background</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography / About Section -->
+    <section id="about" class="py-20 px-6 max-w-5xl mx-auto border-t border-stone-200/80 scroll-mt-20">
+        <div class="flex items-center justify-between mb-12">
+            <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-indigo-900/60 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                01 / Biography
+            </span>
+            <span class="text-xs font-mono-editorial text-stone-500">Bandung, Indonesia</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="md:col-span-2 bg-white p-8 md:p-10 rounded-3xl border border-stone-200/90 shadow-sm card-hover-lift flex flex-col justify-between relative overflow-hidden">
+                <div class="space-y-4 relative z-10">
+                    <span class="text-[11px] font-mono-editorial uppercase tracking-wider text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200/60 w-fit inline-block font-semibold">Philosophy & Purpose</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif-editorial text-stone-950 font-normal leading-snug">
+                        Translating complex systems into humane, accessible, and delightful digital experiences.
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        With an academic background in Information Systems, I believe good software lives at the intersection of business logic, aesthetic simplicity, and engineering craftsmanship. My approach is grounded in user research and functional typography.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-stone-100 flex flex-wrap gap-8 text-xs text-stone-500 font-mono-editorial relative z-10">
+                    <div>
+                        <span class="block text-xl font-bold text-indigo-700 font-sans-editorial">UI/UX</span>
+                        Product Design
+                    </div>
+                    <div>
+                        <span class="block text-xl font-bold text-teal-700 font-sans-editorial">Frontend</span>
+                        Web Engineering
+                    </div>
+                    <div>
+                        <span class="block text-xl font-bold text-amber-700 font-sans-editorial">Analytics</span>
+                        Business Intelligence
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-stone-200/90 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="text-[11px] font-mono-editorial uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-200/60 w-fit inline-block font-semibold">Academic Track</span>
+                    <h3 class="text-lg font-bold text-stone-900">Information Systems</h3>
+                    <p class="text-stone-600 text-xs leading-relaxed">
+                    Focusing on Business Intelligence, Data Analysis, Digital Marketing, and Information Systems. Exploring how data, technology, and business strategy can work together to uncover insights, support decision-making, and create impactful digital solutions.
+
+                </div>
+                <div class="pt-6 border-t border-stone-100 flex items-center justify-between text-xs font-mono-editorial text-stone-500">
+                    <span>Undergraduate</span>
+                    <span class="text-indigo-800 font-semibold bg-indigo-50/80 px-2 py-0.5 rounded-md border border-indigo-100">2024 – Present</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Toolbelt -->
+    <section id="skills" class="py-20 px-6 max-w-5xl mx-auto border-t border-stone-200/80 scroll-mt-20">
+        <div class="flex items-center justify-between mb-12">
+            <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-violet-900/60 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-violet-500"></span>
+                02 / Technical Toolbelt
+            </span>
+            <span class="text-xs font-mono-editorial text-stone-500">Capabilities</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- UI/UX Card -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-violet-300 shadow-sm card-hover-lift space-y-4 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-xl bg-violet-50 text-violet-700 border border-violet-100">
+                        <i data-lucide="palette" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-stone-900">UI/UX & Product Design</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 bg-violet-50/60 hover:bg-violet-100/80 text-violet-900 border border-violet-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Figma</span>
+                    <span class="px-2.5 py-1 bg-violet-50/60 hover:bg-violet-100/80 text-violet-900 border border-violet-100/80 rounded-lg text-xs font-mono-editorial transition-colors">User Research</span>
+                    <span class="px-2.5 py-1 bg-violet-50/60 hover:bg-violet-100/80 text-violet-900 border border-violet-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Design Systems</span>
+                    <span class="px-2.5 py-1 bg-violet-50/60 hover:bg-violet-100/80 text-violet-900 border border-violet-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Prototyping</span>
+                    <span class="px-2.5 py-1 bg-violet-50/60 hover:bg-violet-100/80 text-violet-900 border border-violet-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Wireframing</span>
+                </div>
+            </div>
+
+            <!-- Frontend Card -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-sky-300 shadow-sm card-hover-lift space-y-4 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-xl bg-sky-50 text-sky-700 border border-sky-100">
+                        <i data-lucide="code" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-stone-900">Frontend Engineering</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 bg-sky-50/60 hover:bg-sky-100/80 text-sky-900 border border-sky-100/80 rounded-lg text-xs font-mono-editorial transition-colors">React</span>
+                    <span class="px-2.5 py-1 bg-sky-50/60 hover:bg-sky-100/80 text-sky-900 border border-sky-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Next.js</span>
+                    <span class="px-2.5 py-1 bg-sky-50/60 hover:bg-sky-100/80 text-sky-900 border border-sky-100/80 rounded-lg text-xs font-mono-editorial transition-colors">JavaScript</span>
+                    <span class="px-2.5 py-1 bg-sky-50/60 hover:bg-sky-100/80 text-sky-900 border border-sky-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Tailwind CSS</span>
+                    <span class="px-2.5 py-1 bg-sky-50/60 hover:bg-sky-100/80 text-sky-900 border border-sky-100/80 rounded-lg text-xs font-mono-editorial transition-colors">HTML5 / CSS3</span>
+                </div>
+            </div>
+
+            <!-- Backend Card -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-emerald-300 shadow-sm card-hover-lift space-y-4 transition-all">
+                <div class="flex items-center gap-2.5">
+                    <div class="p-2 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-100">
+                        <i data-lucide="database" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="text-sm font-bold text-stone-900">Backend & Management</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2.5 py-1 bg-emerald-50/60 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-100/80 rounded-lg text-xs font-mono-editorial transition-colors">PHP / Laravel</span>
+                    <span class="px-2.5 py-1 bg-emerald-50/60 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-100/80 rounded-lg text-xs font-mono-editorial transition-colors">MySQL</span>
+                    <span class="px-2.5 py-1 bg-emerald-50/60 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Git & GitHub</span>
+                    <span class="px-2.5 py-1 bg-emerald-50/60 hover:bg-emerald-100/80 text-emerald-900 border border-emerald-100/80 rounded-lg text-xs font-mono-editorial transition-colors">Business Strategy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected Projects Section -->
+    <section id="projects" class="py-20 px-6 max-w-5xl mx-auto border-t border-stone-200/80 scroll-mt-20">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+            <div>
+                <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-amber-800/70 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                    03 / Works
+                </span>
+                <h2 class="text-3xl font-serif-editorial text-stone-950 font-normal mt-1">Selected Projects</h2>
+            </div>
+            <p class="text-xs text-stone-500 font-mono-editorial max-w-xs sm:text-right">
+                A curation of digital products balancing utility, aesthetics, and code.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <!-- Project 1: Agilis -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-violet-300 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://i.ibb.co.com/VWc8RjyK/Whats-App-Image-2026-09-19-at-12-47-53.jpg" alt="Agilis Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-violet-900 transition-colors">Agilis</h3>
+                            <span class="text-[11px] font-mono-editorial font-semibold text-violet-700 bg-violet-50 border border-violet-200/60 px-2.5 py-0.5 rounded-full">UI/UX & App</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Aplikasi Lifestyle berbasis gamifikasi interaktif untuk mengelola kebiasaan harian dan produktivitas menjadi misi menarik.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">Figma • Research</span>
+                    <button type="button" onclick="openProject('agilis')" class="inline-flex items-center gap-1.5 font-semibold text-violet-700 hover:text-violet-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 2: Howl Library -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-sky-300 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop&q=80" alt="Howl Library Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-sky-900 transition-colors">Howl Library</h3>
+                            <span class="text-[11px] font-mono-editorial font-semibold text-sky-700 bg-sky-50 border border-sky-200/60 px-2.5 py-0.5 rounded-full">Web System</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Platform manajemen terpadu perpustakaan digital dan sistem reservasi ruang kreatif secara real-time.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">Laravel • Bootstrap</span>
+                    <button type="button" onclick="openProject('howl')" class="inline-flex items-center gap-1.5 font-semibold text-sky-700 hover:text-sky-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 3: Eatventory -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-emerald-300 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&auto=format&fit=crop&q=80" alt="Eatventory Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-emerald-900 transition-colors">SmartMeal
+                            <span class="text-[11px] font-mono-editorial font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-2.5 py-0.5 rounded-full">SaaS App</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                         Aplikasi smart inventory management untuk memantau persediaan bahan makanan dan membantu mengurangi food waste melalui pengingat masa expired.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">React • Tailwind CSS</span>
+                    <button type="button" onclick="openProject('eatventory')" class="inline-flex items-center gap-1.5 font-semibold text-emerald-700 hover:text-emerald-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 4: CurhatinAja -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-rose-300 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?w=800&auto=format&fit=crop&q=80" alt="CurhatinAja Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-rose-900 transition-colors">CurhatinAja</h3>
+                            <span class="text-[11px] font-mono-editorial font-semibold text-rose-700 bg-rose-50 border border-rose-200/60 px-2.5 py-0.5 rounded-full">UX Research</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Platform ruang aman daring anonim untuk berbagi cerita dan konseling dengan tingkat privasi tinggi.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">Figma • Research</span>
+                    <button type="button" onclick="openProject('curhatinaja')" class="inline-flex items-center gap-1.5 font-semibold text-rose-700 hover:text-rose-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 5: ClevaGo -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-purple-300 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://i.ibb.co.com/93TRYBr6/logo-1.png" alt="ClevaGo Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-purple-900 transition-colors">ClevaGo</h3>
+                            <span class="text-[11px] font-mono-editorial font-semibold text-purple-700 bg-purple-50 border border-purple-200/60 px-2.5 py-0.5 rounded-full">Travel App</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Aplikasi pendamping perjalanan cerdas berbasis lokasi yang menyusun rencana perjalanan secara otomatis.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">Figma • Prototyping</span>
+                    <button type="button" onclick="openProject('clevago')" class="inline-flex items-center gap-1.5 font-semibold text-purple-700 hover:text-purple-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 6: Filmint -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-amber-400 p-6 shadow-sm card-hover-lift flex flex-col justify-between group">
+                <div class="space-y-4">
+                    <div class="h-52 rounded-2xl overflow-hidden relative bg-stone-100 border border-stone-200">
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80" alt="Filmint Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-stone-900 group-hover:text-amber-900 transition-colors">Filmint</h3>
+                            <span class="text-[11px] font-mono-editorial font-semibold text-amber-800 bg-amber-50 border border-amber-200/60 px-2.5 py-0.5 rounded-full">Web App</span>
+                        </div>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Mesin rekomendasi film minimalis terhubung real-time dengan TMDB API untuk kurasi tontonan.
+                        </p>
+                    </div>
+                </div>
+                <div class="pt-5 mt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                    <span class="font-mono-editorial text-stone-400 text-[11px]">React • TMDB API</span>
+                    <button type="button" onclick="openProject('filmint')" class="inline-flex items-center gap-1.5 font-semibold text-amber-700 hover:text-amber-900 transition-colors cursor-pointer">
+                        <span>Case Study</span>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 7: DAMAKARA (Featured) -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-amber-400 p-6 sm:p-8 shadow-sm card-hover-lift md:col-span-2 group">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-[45%] h-60 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80" alt="DAMAKARA Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-3 flex-1">
+                        <div class="flex items-center gap-2 font-mono-editorial text-xs text-amber-800 uppercase">
+                            <span class="font-semibold">E-Commerce & Fashion Brand</span>
+                            <span>•</span>
+                            <span class="bg-amber-100/70 text-amber-900 px-2.5 py-0.5 rounded-full font-bold">Featured Work</span>
+                        </div>
+                        <h3 class="text-2xl font-serif-editorial text-stone-950 font-normal">DAMAKARA</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Platform e-commerce dan katalog busana digital interaktif untuk brand fesyen inklusif Damakara, memadukan karya seni anak berkebutuhan khusus dengan alur belanja daring modern dan responsif.
+                        </p>
+                        <div class="pt-3 flex items-center justify-between">
+                            <div class="flex gap-2 text-xs font-mono-editorial text-stone-700">
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">Figma</span>
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">React</span>
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">Tailwind</span>
+                            </div>
+                            <button type="button" onclick="openProject('damakara')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 hover:text-amber-950 transition-colors cursor-pointer bg-amber-50 hover:bg-amber-100 px-3.5 py-1.5 rounded-full border border-amber-200">
+                                <span>Read Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 8: Jejak Bandung (Featured) -->
+            <div class="bg-white rounded-3xl border border-stone-200/90 hover:border-red-300 p-6 sm:p-8 shadow-sm card-hover-lift md:col-span-2 group">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="w-full md:w-[45%] h-60 rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shrink-0">
+                        <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1200&auto=format&fit=crop&q=80" alt="Jejak Bandung Preview" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="space-y-3 flex-1">
+                        <div class="flex items-center gap-2 font-mono-editorial text-xs text-red-800 uppercase">
+                            <span class="font-semibold">Heritage & Culture Tour</span>
+                            <span>•</span>
+                            <span class="bg-red-100/70 text-red-900 px-2.5 py-0.5 rounded-full font-bold">Interactive Map</span>
+                        </div>
+                        <h3 class="text-2xl font-serif-editorial text-stone-950 font-normal">Jejak Bandung</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                            Aplikasi penjelajahan budaya dan cagar budaya kota Bandung yang menyajikan titik bersejarah, arsip foto lawas kolonial, serta rute wisata mandiri.
+                        </p>
+                        <div class="pt-3 flex items-center justify-between">
+                            <div class="flex gap-2 text-xs font-mono-editorial text-stone-700">
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">Next.js</span>
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">LeafletJS</span>
+                                <span class="bg-stone-100 px-2.5 py-1 rounded-md border border-stone-200/60">MySQL</span>
+                            </div>
+                            <button type="button" onclick="openProject('jejakbandung')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-red-800 hover:text-red-950 transition-colors cursor-pointer bg-red-50 hover:bg-red-100 px-3.5 py-1.5 rounded-full border border-red-200">
+                                <span>Read Case Study</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto border-t border-stone-200/80 scroll-mt-20">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-12">
+            <div>
+                <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-blue-900/70 flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                    04 / Leadership
+                </span>
+                <h2 class="text-3xl font-serif-editorial text-stone-950 font-normal mt-1">Organisasi & Kepanitiaan</h2>
+            </div>
+            <p class="text-xs text-stone-500 font-mono-editorial max-w-xs sm:text-right">
+                Rekam jejak kepemimpinan dalam Hubungan Masyarakat, Kemitraan, dan SDM.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+            <!-- Org 1: Himasif -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-blue-300 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200/60">
+                            Ketua Divisi HUMAS
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Organisasi</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Himasif</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Memimpin divisi Hubungan Masyarakat (HUMAS) mengorkestrasi komunikasi internal-eksternal, kolaborasi antar lembaga, serta reputasi organisasi.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-blue-800/80 flex items-center justify-between">
+                    <span>Leadership • Public Relations</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-500"></i>
+                </div>
+            </div>
+
+            <!-- Org 2: TECHNOVATION -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-amber-400 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200/60">
+                            Ketua Divisi HUMAS
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Kepanitiaan</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Seminar TECHNOVATION</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Memimpin divisi HUMAS menjaring pendanaan (Sponsorship) mitra korporat, menegosiasikan venue representatif, dan memperluas publikasi peserta.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-amber-800/90 flex items-center justify-between">
+                    <span>Sponsorship • Venue Negotiation</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-amber-600"></i>
+                </div>
+            </div>
+
+            <!-- Org 3: Onelish -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-teal-300 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-teal-50 text-teal-700 border border-teal-200/60">
+                            Ketua Divisi Humas
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Komunitas</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Onelish</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Merumuskan strategi diseminasi informasi, kampanye keterlibatan anggota (engagement), dan memfasilitasi komunikasi kemitraan strategis.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-teal-800/80 flex items-center justify-between">
+                    <span>Strategic Communication</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-teal-500"></i>
+                </div>
+            </div>
+
+            <!-- Org 4: Duta Cerita -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-pink-300 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-pink-50 text-pink-700 border border-pink-200/60">
+                            Duta Cerita
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Ambassador</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Duta Cerita</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Menyuarakan narasi bermakna bagi generasi muda melalui storytelling kreatif, advokasi literasi sosial, dan kampanye digital berdampak.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-pink-800/80 flex items-center justify-between">
+                    <span>Storytelling • Youth Advocacy</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-pink-500"></i>
+                </div>
+            </div>
+
+            <!-- Org 5: Onetalk -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-emerald-300 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                            Ketua Divisi HRD
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Organisasi</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">Onetalk</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Bertindak sebagai penanggung jawab utama SDM, peningkatan kapabilitas anggota, proses rekrutmen internal, dan budaya kolaboratif tim.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-emerald-800/80 flex items-center justify-between">
+                    <span>Human Resources • Team Culture</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-500"></i>
+                </div>
+            </div>
+
+            <!-- Org 6: OneByCode -->
+            <div class="bg-white p-7 rounded-3xl border border-stone-200/90 hover:border-indigo-300 shadow-sm card-hover-lift flex flex-col justify-between">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-mono-editorial font-bold px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                            Ketua Divisi Humas
+                        </span>
+                        <span class="text-xs font-mono-editorial text-stone-400">Tech Community</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900">OneByCode</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        Mengarahkan publikasi edukasi pemrograman, menggalang kolaborasi developer, dan memperluas literasi teknologi generasi muda.
+                    </p>
+                </div>
+                <div class="pt-4 mt-4 border-t border-stone-100 text-[11px] font-mono-editorial text-indigo-800/80 flex items-center justify-between">
+                    <span>Tech Outreach • Community Building</span>
+                    <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-indigo-500"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitions Ledger (BCC & BPC) -->
+        <div class="space-y-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <span class="text-xs font-bold tracking-wider uppercase font-mono-editorial text-emerald-800/70 flex items-center gap-2">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                        05 / Competitions
+                    </span>
+                    <h2 class="text-3xl font-serif-editorial text-stone-950 font-normal mt-1">Partisipasi Lomba BCC & BPC</h2>
+                </div>
+                <span class="text-xs font-mono-editorial text-stone-700 bg-white border border-stone-200 px-3 py-1 rounded-full shadow-sm w-fit">
+                    9 Kompetisi Terpilih (2024 – 2025)
+                </span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                
+                <!-- 1. DIGCOFEST -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-amber-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Intl BCC</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2024</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">DIGCOFEST International BCC</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Studi kasus disrupsi digital & keberlanjutan bisnis oleh FEB UNESA & PDAM Surabaya.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="font-semibold text-amber-800 text-[11px] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i data-lucide="trophy" class="w-3 h-3 text-amber-600"></i>
+                            Semi Finalist
+                        </span>
+                        <button type="button" onclick="openCertificate('digcofest')" class="inline-flex items-center gap-1 font-semibold text-indigo-700 hover:text-indigo-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Intl Mgmt BCC -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded border border-blue-100">Intl BCC</span>
+                            <span class="text-[10px] font-mono-editorial text-amber-800 bg-amber-50/70 border border-amber-200/50 px-2 py-0.5 rounded">Tanpa Sertifikat</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">International Management BCC</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Analisis pemecahan masalah manajemen strategis dan optimasi operasional perusahaan global.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('intl_mgmt')" class="inline-flex items-center gap-1 font-semibold text-stone-700 hover:text-stone-950 transition-colors cursor-pointer text-xs">
+                            <span>Catatan</span>
+                            <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. BSTARTION -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-amber-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-100">Startup</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2024</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">BSTARTION 2024</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Kompetisi startup BINUS University. Meraih Semi Finalist dengan inovasi eco-consciousness.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="font-semibold text-amber-800 text-[11px] bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i data-lucide="trophy" class="w-3 h-3 text-amber-600"></i>
+                            Semi Finalist
+                        </span>
+                        <button type="button" onclick="openCertificate('bstartion')" class="inline-flex items-center gap-1 font-semibold text-indigo-700 hover:text-indigo-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. GEM -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-emerald-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">Business Plan</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2025</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">Gerakan Entrepreneur Muda</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Penyusunan rencana bisnis terapan wirausahawan muda serta inovasi model bisnis.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('gem')" class="inline-flex items-center gap-1 font-semibold text-emerald-700 hover:text-emerald-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Progressio -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded border border-purple-100">Challenge</span>
+                            <span class="text-[10px] font-mono-editorial text-amber-800 bg-amber-50/70 border border-amber-200/50 px-2 py-0.5 rounded">Tanpa Sertifikat</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">Progressio Business Challenge</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Tantangan perumusan strategi bisnis solutif terhadap akselerasi transformasi digital.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('progressio')" class="inline-flex items-center gap-1 font-semibold text-stone-700 hover:text-stone-950 transition-colors cursor-pointer text-xs">
+                            <span>Catatan</span>
+                            <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. Recursion 1.0 -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-100">Tech & Case</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2025</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">Recursion 1.0</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Ajang kompetisi integrasi teknologi informasi dan strategi bisnis problem industri.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('recursion')" class="inline-flex items-center gap-1 font-semibold text-stone-700 hover:text-stone-950 transition-colors cursor-pointer text-xs">
+                            <span>Catatan</span>
+                            <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. NBPC -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-amber-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-100">National BPC</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2025</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">National BPC 2025</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Kompetisi rencana bisnis nasional menguji kelayakan model bisnis dan proyeksi finansial.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('nbpc')" class="inline-flex items-center gap-1 font-semibold text-amber-700 hover:text-amber-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8. Econeering FTUI -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-teal-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-teal-700 bg-teal-50 px-2 py-0.5 rounded border border-teal-100">Case Comp</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2025</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">Econeering FTUI 2025</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Studi kasus kolaborasi carbon offset & inovasi keberlanjutan lingkungan oleh BEM FTUI.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('econeering')" class="inline-flex items-center gap-1 font-semibold text-teal-700 hover:text-teal-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 9. LOGICODIX UNESA -->
+                <div class="bg-white p-6 rounded-3xl border border-stone-200/90 hover:border-violet-300 shadow-sm card-hover-lift flex flex-col justify-between h-full">
+                    <div class="space-y-2.5">
+                        <div class="flex items-center justify-between">
+                            <span class="text-[10px] font-mono-editorial uppercase font-bold text-violet-700 bg-violet-50 px-2 py-0.5 rounded border border-violet-100">National BPC</span>
+                            <span class="text-xs font-mono-editorial text-stone-400">2025</span>
+                        </div>
+                        <h4 class="text-sm font-bold text-stone-900">LOGICODIX 2025</h4>
+                        <p class="text-xs text-stone-600 leading-relaxed">Kompetisi business plan Fakultas Teknik UNESA 'Ignite the Future: Evolving Ideas'.</p>
+                    </div>
+                    <div class="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span class="text-stone-500 text-[11px]">Participant</span>
+                        <button type="button" onclick="openCertificate('logicodix')" class="inline-flex items-center gap-1 font-semibold text-violet-700 hover:text-violet-900 transition-colors cursor-pointer text-xs">
+                            <span>Sertifikat</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Detail Project (Editorial Warm Style) -->
+    <div id="project-modal" style="display: none;" class="fixed inset-0 z-[9999] items-center justify-center p-4 bg-stone-900/50 backdrop-blur-sm">
+        <div class="bg-[#FAF9F5] max-w-2xl w-full rounded-3xl overflow-hidden shadow-2xl border border-stone-300 flex flex-col max-h-[90vh]">
+            <div class="p-6 border-b border-stone-200 flex items-center justify-between bg-white/70">
+                <div>
+                    <h3 id="modal-title" class="text-2xl font-serif-editorial text-stone-950 font-normal">Project Title</h3>
+                    <p id="modal-category" class="text-xs text-indigo-700 font-mono-editorial font-semibold mt-0.5">Category</p>
+                </div>
+                <button type="button" onclick="closeProject()" class="p-2 hover:bg-stone-200 rounded-full transition-colors cursor-pointer text-stone-600 hover:text-stone-950" aria-label="Close Details">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div class="w-full min-h-[200px] max-h-[400px] rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 flex items-center justify-center p-3">
+                    <img id="modal-image" src="" alt="Project Banner" class="w-full h-auto max-h-[360px] object-contain rounded-xl">
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-xs uppercase tracking-wider text-amber-800 font-mono-editorial font-bold mb-1">Overview</h4>
+                        <p id="modal-desc" class="text-stone-700 text-sm md:text-base leading-relaxed"></p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-stone-200">
+                        <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                            <h4 class="text-[11px] uppercase tracking-wider text-violet-700 font-mono-editorial font-bold mb-1">Peran</h4>
+                            <p id="modal-role" class="text-stone-900 text-xs font-semibold"></p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                            <h4 class="text-[11px] uppercase tracking-wider text-teal-700 font-mono-editorial font-bold mb-1">Waktu</h4>
+                            <p id="modal-timeline" class="text-stone-900 text-xs font-semibold"></p>
+                        </div>
+                        <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                            <h4 class="text-[11px] uppercase tracking-wider text-amber-700 font-mono-editorial font-bold mb-1">Teknologi</h4>
+                            <p id="modal-tech" class="text-stone-900 text-xs font-mono-editorial"></p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-stone-200">
+                        <h4 class="text-xs uppercase tracking-wider text-stone-700 font-mono-editorial font-bold mb-2.5">Key Responsibilities</h4>
+                        <ul id="modal-tasks" class="list-disc pl-5 text-stone-700 text-xs sm:text-sm space-y-2"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detail Sertifikat (Editorial Warm Style) -->
+    <div id="certificate-modal" style="display: none;" class="fixed inset-0 z-[9999] items-center justify-center p-4 bg-stone-900/50 backdrop-blur-sm">
+        <div class="bg-[#FAF9F5] max-w-3xl w-full rounded-3xl overflow-hidden shadow-2xl border border-stone-300 flex flex-col max-h-[92vh]">
+            <div class="p-6 border-b border-stone-200 flex items-center justify-between bg-white/70">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-amber-50 border border-amber-200 rounded-xl text-amber-700">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <h3 id="cert-modal-title" class="text-xl font-bold text-stone-950">Nama Kompetisi</h3>
+                        <p id="cert-modal-category" class="text-xs text-amber-800 font-mono-editorial font-semibold mt-0.5">Certificate Information</p>
+                    </div>
+                </div>
+                <button type="button" onclick="closeCertificate()" class="p-2 hover:bg-stone-200 rounded-full transition-colors cursor-pointer text-stone-500 hover:text-stone-950" aria-label="Close Certificate">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <div class="p-6 md:p-8 overflow-y-auto space-y-6">
+                <div id="cert-modal-image-container" class="relative group rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 flex items-center justify-center min-h-[220px] max-h-[420px]">
+                    <img id="cert-modal-image" src="" alt="Pratinjau Sertifikat" class="w-full h-auto object-contain max-h-[400px] rounded-xl">
+                </div>
+
+                <div id="cert-modal-no-image" style="display: none;" class="p-8 rounded-2xl bg-amber-50 border border-amber-200 text-center flex flex-col items-center justify-center space-y-3">
+                    <div class="p-3 bg-amber-100 rounded-full text-amber-800">
+                        <i data-lucide="alert-circle" class="w-6 h-6"></i>
+                    </div>
+                    <div class="space-y-1">
+                        <h4 class="text-base font-bold text-stone-900">Sertifikat Digital Tidak Diterbitkan</h4>
+                        <p id="cert-modal-note-text" class="text-xs sm:text-sm text-stone-600 max-w-lg leading-relaxed"></p>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-stone-200 text-[11px] text-stone-700 font-mono-editorial mt-1">
+                        <i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                        Status: Partisipasi Kompetisi Tervalidasi
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+                    <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                        <h4 class="text-[11px] uppercase tracking-wider text-indigo-700 font-mono-editorial font-bold mb-1">Ajang</h4>
+                        <p id="cert-modal-event" class="text-stone-900 text-xs font-semibold"></p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                        <h4 class="text-[11px] uppercase tracking-wider text-amber-700 font-mono-editorial font-bold mb-1">Tahun</h4>
+                        <p id="cert-modal-year" class="text-stone-900 text-xs font-semibold"></p>
+                    </div>
+                    <div class="p-3.5 rounded-2xl bg-white border border-stone-200/90">
+                        <h4 class="text-[11px] uppercase tracking-wider text-emerald-700 font-mono-editorial font-bold mb-1">Status</h4>
+                        <p id="cert-modal-status" class="text-emerald-700 text-xs font-semibold flex items-center gap-1.5">
+                            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-emerald-600"></i>
+                            <span id="cert-modal-status-text">Official Participant</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs uppercase tracking-wider text-stone-700 font-mono-editorial font-bold mb-1">Deskripsi Kegiatan</h4>
+                    <p id="cert-modal-desc" class="text-stone-700 text-sm leading-relaxed"></p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-stone-200">
+                    <span id="cert-modal-verified" class="text-xs text-emerald-800 flex items-center gap-1.5">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                        <span>Dokumen Terverifikasi & Resmi</span>
+                    </span>
+                    <a id="cert-modal-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-stone-900 text-stone-50 hover:bg-stone-800 transition-all shadow-sm">
+                        <span>Lihat Dokumen Asli</span>
+                        <i data-lucide="external-link" class="w-3.5 h-3.5 text-amber-300"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-5xl mx-auto border-t border-stone-200/80 scroll-mt-20">
+        <div class="bg-white rounded-3xl p-8 md:p-14 border border-stone-200/90 shadow-sm text-center space-y-8 relative overflow-hidden">
+            <!-- Subtle interior warm glow -->
+            <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-amber-100/50 blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-indigo-100/50 blur-2xl pointer-events-none"></div>
+
+            <div class="space-y-3 max-w-xl mx-auto relative z-10">
+                <span class="text-xs font-mono-editorial font-bold text-amber-800/80 uppercase tracking-wider bg-amber-50 px-3 py-1 rounded-full border border-amber-200/60 inline-block">06 / Contact</span>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-serif-editorial text-stone-950 font-normal leading-tight">
+                    Let's create thoughtful work together.
+                </h2>
+                <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                    Terbuka untuk kesempatan magang, proyek kolaboratif frontend & UI/UX, serta diskusi studi kasus bisnis.
+                </p>
+            </div>
+
+            <!-- Email Pill -->
+            <div class="max-w-md mx-auto relative z-10">
+                <a href="mailto:aripratamaokta@gmail.com" class="flex items-center justify-between p-4 px-6 rounded-full bg-[#FAF9F5] hover:bg-stone-100 border border-stone-200 hover:border-amber-400/80 transition-all shadow-sm group">
+                    <div class="flex items-center gap-3">
+                        <div class="p-2 rounded-full bg-amber-100 text-amber-800">
+                            <i data-lucide="mail" class="w-4 h-4"></i>
+                        </div>
+                        <span class="text-xs sm:text-sm font-semibold text-stone-900 group-hover:text-amber-900 transition-colors">aripratamaokta@gmail.com</span>
+                    </div>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-stone-400 group-hover:text-amber-800 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
+                </a>
+            </div>
+
+            <!-- Social Media Channels with subtle brand colors on hover -->
+            <div class="pt-6 border-t border-stone-100 relative z-10">
+                <p class="text-xs font-mono-editorial text-stone-400 uppercase tracking-wider mb-4">Connect on other channels</p>
+                <div class="flex flex-wrap items-center justify-center gap-2.5">
+                    <a href="https://www.linkedin.com/in/Arioktpratama" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-stone-50 hover:bg-blue-50 border border-stone-200 hover:border-blue-200 text-xs font-medium text-stone-700 hover:text-blue-700 transition-all flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-600"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/AOP1" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-stone-50 hover:bg-stone-900 border border-stone-200 hover:border-stone-900 text-xs font-medium text-stone-700 hover:text-stone-50 transition-all flex items-center gap-1.5 shadow-sm group">
+                        <i data-lucide="github" class="w-3.5 h-3.5 text-stone-700 group-hover:text-stone-50"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.instagram.com/arioktapratama21" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-stone-50 hover:bg-rose-50 border border-stone-200 hover:border-rose-200 text-xs font-medium text-stone-700 hover:text-rose-600 transition-all flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="instagram" class="w-3.5 h-3.5 text-rose-500"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://wa.me/6281995223741" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-stone-50 hover:bg-emerald-50 border border-stone-200 hover:border-emerald-200 text-xs font-medium text-stone-700 hover:text-emerald-700 transition-all flex items-center gap-1.5 shadow-sm">
+                        <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-stone-200 text-center text-xs text-stone-500 font-mono-editorial space-y-1">
+        <p>&copy; <span id="current-year"></span> Ari Okta Pratama. Crafted with clarity, warmth, and restraint.</p>
+    </footer>
+
+    <!-- External Custom JavaScript -->
+    <script src="indesx.js"></script>
+</body>
+</html>
