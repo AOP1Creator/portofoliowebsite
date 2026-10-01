@@ -334,13 +334,13 @@ const projectsData = {
         ]
     },
     eatventory: {
-        title: "SmartMeal",
+        title: "EatVentory",
         category: "SaaS Kitchen Inventory & Tracker(BPC)",
         desc: "Aplikasi pelacak inventaris dapur pintar untuk meminimalkan sisa makanan (food waste) dengan pengingat tanggal kedaluwarsa.",
         role: "UI/UX Designer, Financial Analysis",
-        timeline: "Februari 2025 - Mei 2025",
+        timeline: "February 2025 - Juni 2025",
         tech: "Figma",
-        image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&auto=format&fit=crop&q=80",
+        image: "https://i.ibb.co.com/sLpY7k5/a-logo-design-for-the-eatventory-app-sho-g-MWzm-L6r-Sd-Sz-M13-GBtcdw-at2fmam-UQc-Zu9-ZBy-udf-Q-1.png",
         tasks: [
             "Merancang UI/UX dashboard inventaris dengan pendekatan bento-grid untuk menciptakan tampilan yang intuitif dan informatif.",
             "Mendesain visualisasi data stok bahan makanan dan masa simpan agar informasi mudah dipahami oleh pengguna.",
