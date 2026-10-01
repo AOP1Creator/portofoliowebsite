@@ -386,16 +386,20 @@ const projectsData = {
     clevago: {
         title: "ClevaGo",
         category: "Mobile Smart Travel Companion",
-        desc: "Aplikasi pendamping perjalanan cerdas berbasis lokasi yang menyusun rencana perjalanan harian (itinerary) secara otomatis.",
+        desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya." 
+            "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
         role: "UI/UX Designer",
         timeline: "Oktober 2024 - Januari 2025",
         tech: "Figma, Adobe Illustrator",
         image: "https://i.ibb.co.com/93TRYBr6/logo-1.png",
         tasks: [
-            "Merancang alur onboarding intuitif untuk memetakan budget dan minat pengguna.",
-            "Mendesain tampilan peta rute interaktif dengan rute dan estimasi waktu.",
-            "Membuat prototipe interaktif pemesanan tiket wisata mandiri di Figma.",
-            "Menyusun Design System komprehensif untuk standarisasi aplikasi."
+         "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna."
+         "Merancang user flow, information architecture, wireframe, hingga high-fidelity UI menggunakan Figma."
+         "Mendesain pengalaman pengguna untuk fitur pemesanan layanan, corporate service, dan permintaan kunjungan presentasi."
+        "Membuat prototype interaktif serta melakukan usability testing untuk mengevaluasi rancangan."
+        "Berkolaborasi dengan tim untuk menerjemahkan kebutuhan bisnis menjadi solusi digital yang mudah digunakan."
+        "Membantu menyusun business process dan system flow sebagai dasar pengembangan aplikasi ClevaGo."
+        "Menganalisis kebutuhan customer corporate dan merancang alur layanan yang sesuai dengan kebutuhan bisnis."
         ]
     },
     filmint: {
