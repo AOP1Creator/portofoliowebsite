@@ -381,7 +381,7 @@ const projectsData = {
     },
     clevago: {
         title: "ClevaGo",
-        category:"Integrated Home Service Platform"
+        category:"Integrated Home Service Platform",
         desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya. " + 
               "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
         role: "System Analyst, UI/UX Designer",
