@@ -1,7 +1,3 @@
-/**
- * Main JavaScript File for Ari Okta Pratama Portfolio
- * Theme: Minimalist Light / Editorial Warm
- */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Inisialisasi icon Lucide
@@ -385,8 +381,7 @@ const projectsData = {
     },
     clevago: {
         title: "ClevaGo",
-        category: "Mobile Smart Travel Companion",
-        // Perbaikan: Menghubungkan dua string dengan tanda +
+        category:"Integrated Home Service Platform"
         desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya. " + 
               "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
         role: "System Analyst, UI/UX Designer",
