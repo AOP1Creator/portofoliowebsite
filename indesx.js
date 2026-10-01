@@ -389,12 +389,12 @@ const projectsData = {
         tech: "Figma, Drawio",
         image: "https://i.ibb.co.com/93TRYBr6/logo-1.png",
         tasks: [
-            "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna.", // Perbaikan: Tambah koma
-            "Merancang user flow, information architecture, wireframe, hingga high-fidelity UI menggunakan Figma.", // Perbaikan: Tambah koma
-            "Mendesain pengalaman pengguna untuk fitur pemesanan layanan, corporate service, dan permintaan kunjungan presentasi.", // Perbaikan: Tambah koma
+            "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna.",
+            "Merancang user flow, information architecture, wireframe, hingga high-fidelity UI menggunakan Figma.",
+            "Mendesain pengalaman pengguna untuk fitur pemesanan layanan, corporate service, dan permintaan kunjungan presentasi.",
             "Membuat prototype interaktif serta melakukan usability testing untuk mengevaluasi rancangan.", // Perbaikan: Tambah koma
-            "Berkolaborasi dengan tim untuk menerjemahkan kebutuhan bisnis menjadi solusi digital yang mudah digunakan.", // Perbaikan: Tambah koma
-            "Membantu menyusun business process dan system flow sebagai dasar pengembangan aplikasi ClevaGo.", // Perbaikan: Tambah koma
+            "Berkolaborasi dengan tim untuk menerjemahkan kebutuhan bisnis menjadi solusi digital yang mudah digunakan.",
+            "Membantu menyusun business process dan system flow sebagai dasar pengembangan aplikasi ClevaGo.", 
             "Menganalisis kebutuhan customer corporate dan merancang alur layanan yang sesuai dengan kebutuhan bisnis."
         ]
     },
@@ -408,10 +408,10 @@ const projectsData = {
         image: "https://i.ibb.co.com/ZvTNSLn/image-4.png",
         tasks: [
             "Membangun fitur filter multi-kategori (genre, rating IMDb, tahun rilis).",
-            "User Flow & Wireframing: Merancang alur navigasi pengguna (user flow) yang sederhana mulai dari pencarian awal hingga penemuan rekomendasi film, serta menyusun wireframe (low-fidelity ke high-fidelity) untuk struktur halaman."
-            "Perancangan Sistem Filter & Discovery: Mendesain antarmuka interaktif untuk fitur filter genre dan rating agar memudahkan pengguna menyortir katalog TMDB tanpa cognitive overload."
-            "Visual & Interface Design (UI): Menentukan konsep estetika minimalis, pemilihan palet warna netral/gelap yang ramah untuk tampilan poster film, hierarki tipografi, serta tata letak kartu film (card layout) yang rapi dan konsisten."
-            "Design System & Komponen: Membuat sistem komponen antarmuka yang dapat digunakan berulang (seperti search bar, tombol filter, badge rating/genre, dan modal preview film)."
+            "User Flow & Wireframing: Merancang alur navigasi pengguna (user flow) yang sederhana mulai dari pencarian awal hingga penemuan rekomendasi film, serta menyusun wireframe (low-fidelity ke high-fidelity) untuk struktur halaman.",
+            "Perancangan Sistem Filter & Discovery: Mendesain antarmuka interaktif untuk fitur filter genre dan rating agar memudahkan pengguna menyortir katalog TMDB tanpa cognitive overload.",
+            "Visual & Interface Design (UI): Menentukan konsep estetika minimalis, pemilihan palet warna netral/gelap yang ramah untuk tampilan poster film, hierarki tipografi, serta tata letak kartu film (card layout) yang rapi dan konsisten.",
+            "Design System & Komponen: Membuat sistem komponen antarmuka yang dapat digunakan berulang (seperti search bar, tombol filter, badge rating/genre, dan modal preview film).",
         ]
     },
     jejakbandung: {
