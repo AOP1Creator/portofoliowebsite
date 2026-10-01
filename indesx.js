@@ -389,9 +389,9 @@ const projectsData = {
         // Perbaikan: Menghubungkan dua string dengan tanda +
         desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya. " + 
               "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
-        role: "UI/UX Designer",
-        timeline: "Oktober 2024 - Januari 2025",
-        tech: "Figma, Adobe Illustrator",
+        role: "System Analyst, UI/UX Designer",
+        timeline: "February 2025 - Juni 2025",
+        tech: "Figma, Drawio",
         image: "https://i.ibb.co.com/93TRYBr6/logo-1.png",
         tasks: [
             "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna.", // Perbaikan: Tambah koma
