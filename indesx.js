@@ -354,9 +354,9 @@ const projectsData = {
         category: "E-Commerce & Sustainable Fashion Web",
         desc: "Platform e-commerce dan katalog busana digital interaktif untuk brand fesyen lokal Damakara. Proyek ini memadukan nilai artistik karya seni inklusif—yang digambar oleh individu berkebutuhan khusus—dengan arsitektur belanja daring modern yang responsif, terstruktur, dan ramah pengguna.",
         role: "UI/UX Designer & Frontend Developer",
-        timeline: "November 2024 - Februari 2025",
-        tech: "Figma, React, Tailwind CSS, REST API",
-        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&auto=format&fit=crop&q=80",
+        timeline: "September 2025 - Januari 2026",
+        tech: "Figma",
+        image: "https://i.ibb.co.com/JFjF9spX/1-h-U37186-20230623.jpg",
         tasks: [
             "Melakukan user research dan merancang antarmuka e-commerce berfokus pada kemudahan eksplorasi katalog busana serta konversi belanja.",
             "Mendesain Design System, wireframe, hingga prototype high-fidelity di Figma yang mencerminkan identitas brand yang hangat dan inklusif.",
