@@ -386,20 +386,21 @@ const projectsData = {
     clevago: {
         title: "ClevaGo",
         category: "Mobile Smart Travel Companion",
-        desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya." 
-            "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
+        // Perbaikan: Menghubungkan dua string dengan tanda +
+        desc: "Platform layanan home service yang menghubungkan pengguna dengan layanan profesional seperti laundry, home cleaning, dan pest control secara mudah, cepat, dan terpercaya. " + 
+              "ClevaGo juga menyediakan solusi layanan untuk kebutuhan perusahaan (corporate) dengan proses pemesanan dan pengelolaan layanan yang terintegrasi.",
         role: "UI/UX Designer",
         timeline: "Oktober 2024 - Januari 2025",
         tech: "Figma, Adobe Illustrator",
         image: "https://i.ibb.co.com/93TRYBr6/logo-1.png",
         tasks: [
-         "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna."
-         "Merancang user flow, information architecture, wireframe, hingga high-fidelity UI menggunakan Figma."
-         "Mendesain pengalaman pengguna untuk fitur pemesanan layanan, corporate service, dan permintaan kunjungan presentasi."
-        "Membuat prototype interaktif serta melakukan usability testing untuk mengevaluasi rancangan."
-        "Berkolaborasi dengan tim untuk menerjemahkan kebutuhan bisnis menjadi solusi digital yang mudah digunakan."
-        "Membantu menyusun business process dan system flow sebagai dasar pengembangan aplikasi ClevaGo."
-        "Menganalisis kebutuhan customer corporate dan merancang alur layanan yang sesuai dengan kebutuhan bisnis."
+            "Melakukan user research untuk memahami kebutuhan dan permasalahan pengguna.", // Perbaikan: Tambah koma
+            "Merancang user flow, information architecture, wireframe, hingga high-fidelity UI menggunakan Figma.", // Perbaikan: Tambah koma
+            "Mendesain pengalaman pengguna untuk fitur pemesanan layanan, corporate service, dan permintaan kunjungan presentasi.", // Perbaikan: Tambah koma
+            "Membuat prototype interaktif serta melakukan usability testing untuk mengevaluasi rancangan.", // Perbaikan: Tambah koma
+            "Berkolaborasi dengan tim untuk menerjemahkan kebutuhan bisnis menjadi solusi digital yang mudah digunakan.", // Perbaikan: Tambah koma
+            "Membantu menyusun business process dan system flow sebagai dasar pengembangan aplikasi ClevaGo.", // Perbaikan: Tambah koma
+            "Menganalisis kebutuhan customer corporate dan merancang alur layanan yang sesuai dengan kebutuhan bisnis."
         ]
     },
     filmint: {
