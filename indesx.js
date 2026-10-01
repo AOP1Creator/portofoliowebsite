@@ -401,16 +401,17 @@ const projectsData = {
     filmint: {
         title: "Filmint",
         category: "Minimalist Movie Recommendation Engine",
-        desc: "Mesin pencari rekomendasi film minimalis yang terintegrasi dengan database TMDB API.",
-        role: "Frontend Developer",
-        timeline: "Desember 2024 - Februari 2025",
-        tech: "React, Tailwind CSS, REST API",
-        image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&auto=format&fit=crop&q=80",
+        desc: "Mesin pencari rekomendasi film minimalis yang terintegrasi dengan database.",
+        role: "UI/UX Designer",
+        timeline: "September 2025 - Januari 2026",
+        tech: "Figma",
+        image: "https://i.ibb.co.com/ZvTNSLn/image-4.png",
         tasks: [
-            "Menghubungkan antarmuka web dengan REST API TMDB secara real-time.",
             "Membangun fitur filter multi-kategori (genre, rating IMDb, tahun rilis).",
-            "Merancang grid poster film responsif dengan cuplikan sinopsis interaktif.",
-            "Menerapkan lazy-loading poster beresolusi tinggi guna menghemat kuota."
+            "User Flow & Wireframing: Merancang alur navigasi pengguna (user flow) yang sederhana mulai dari pencarian awal hingga penemuan rekomendasi film, serta menyusun wireframe (low-fidelity ke high-fidelity) untuk struktur halaman."
+            "Perancangan Sistem Filter & Discovery: Mendesain antarmuka interaktif untuk fitur filter genre dan rating agar memudahkan pengguna menyortir katalog TMDB tanpa cognitive overload."
+            "Visual & Interface Design (UI): Menentukan konsep estetika minimalis, pemilihan palet warna netral/gelap yang ramah untuk tampilan poster film, hierarki tipografi, serta tata letak kartu film (card layout) yang rapi dan konsisten."
+            "Design System & Komponen: Membuat sistem komponen antarmuka yang dapat digunakan berulang (seperti search bar, tombol filter, badge rating/genre, dan modal preview film)."
         ]
     },
     jejakbandung: {
