@@ -324,8 +324,8 @@ const projectsData = {
         desc: "Platform manajemen terpadu perpustakaan digital dan sistem reservasi ruang kreatif secara real-time.",
         role: "Frontend Developer & UI Designer",
         timeline: "Januari 2025 - Juni 2025",
-        tech: "Laravel, PHP, Bootstrap, MySQL",
-        image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800&auto=format&fit=crop&q=80",
+        tech: "Figma, PHP, MySQL",
+        image: "https://i.ibb.co.com/7tjDSH3S/55eddb40-121c-4917-8661-4841db1b6e7d.jpg",
         tasks: [
             "Merancang dashboard admin yang intuitif untuk mengelola buku dan peminjaman.",
             "Mengembangkan antarmuka katalog perpustakaan digital dan formulir reservasi studio.",
