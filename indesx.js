@@ -418,10 +418,10 @@ const projectsData = {
         title: "Jejak Bandung",
         category: "Interactive Heritage Tour Guide",
         desc: "Platform penjelajahan sejarah kota Bandung yang menyajikan titik bersejarah, arsip foto lawas, dan rute jelajah mandiri.",
-        role: "Fullstack Developer & Designer",
+        role: "UI/UX Designer",
         timeline: "Januari 2025 - Maret 2025",
-        tech: "Next.js, Tailwind CSS, MySQL, LeafletJS",
-        image: "https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1200&auto=format&fit=crop&q=80",
+        tech: "Figma",
+        image: "https://i.ibb.co.com/6JZvr81h/6b59a7e4-eef0-46bd-a91f-27e51fd3130d.jpg",
         tasks: [
             "Merancang identitas visual dan antarmuka bernuansa heritage retro-modern.",
             "Mengintegrasikan peta interaktif berbasis LeafletJS untuk rute jalan kaki cagar budaya.",
