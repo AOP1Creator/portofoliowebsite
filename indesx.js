@@ -325,7 +325,7 @@ const projectsData = {
         role: "Frontend Developer & UI Designer",
         timeline: "Januari 2025 - Juni 2025",
         tech: "Figma, PHP, MySQL",
-        image: "https://i.ibb.co.com/7tjDSH3S/55eddb40-121c-4917-8661-4841db1b6e7d.jpg",
+        image: "https://i.ibb.co.com/Lz05yQmw/920d4949-fa0e-489d-98f6-64893ccb6275.jpg",
         tasks: [
             "Merancang dashboard admin yang intuitif untuk mengelola buku dan peminjaman.",
             "Mengembangkan antarmuka katalog perpustakaan digital dan formulir reservasi studio.",
